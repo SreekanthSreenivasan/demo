@@ -1,0 +1,18 @@
+<section>
+  <div class="example-button-row">
+    <!-- <button mat-button color="primary" (click)="changeStatus(currentStatus)">
+      {{ currentStatus }}
+    </button> -->
+    <section class="example-section">
+      <mat-checkbox class="example-margin" (change)="changeStatus($event)"
+        >Show even Id</mat-checkbox
+      >
+    </section>
+  </div>
+
+  <div class="example-button-row">
+    <button mat-button color="primary" (click)="addNewUser()">
+      Add new user
+    </button>
+  </div>
+</section>

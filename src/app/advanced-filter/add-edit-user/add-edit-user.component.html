@@ -1,0 +1,46 @@
+<mat-card class="card-container">
+  <h3>{{ data.header }} User</h3>
+  <form [formGroup]="Formdata">
+    <br />
+    <div>
+      <input
+        type="text"
+        formControlName="name"
+        [name]=""
+        placeholder="Enter User Name"
+      />
+    </div>
+
+    <div formGroupName="address">
+      <p>Address</p>
+      <input formControlName="street" placeholder="street" [required]="true" />
+      <br />
+      <input formControlName="city" placeholder="city" [required]="true" />
+      <br />
+
+      <input formControlName="zipcode" placeholder="zip" [required]="true" />
+    </div>
+    <br />
+
+    <div>
+      <button
+        mat-raised-button
+        class="button"
+        [disabled]="!Formdata.valid"
+        *ngIf="data.mode === 'add'"
+        (click)="addNewUser()"
+      >
+        Add ✔
+      </button>
+      <button
+        mat-raised-button
+        class="button"
+        [disabled]="!Formdata.valid"
+        *ngIf="data.mode === 'edit'"
+        (click)="editUser()"
+      >
+        Edit ✔
+      </button>
+    </div>
+  </form>
+</mat-card>

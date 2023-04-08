@@ -1,0 +1,26 @@
+<app-search-bar></app-search-bar>
+
+<div *ngIf="userDetails.length > 0; else noDataFound">
+  <mat-grid-list cols="5" rowHeight="4:3">
+    <mat-grid-tile *ngFor="let user of userDetails">
+      <mat-card>
+        <mat-card-title>{{ user.name }}</mat-card-title>
+        <mat-card-content>
+          <p>ID: {{ user.id }}</p>
+          <p>
+            Address: {{ user.address.street }}, {{ user.address.city }},
+            {{ user.address.zipcode }}
+          </p>
+        </mat-card-content>
+        <button mat-button [matMenuTriggerFor]="menu">Actions</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="editUser(user)">Edit</button>
+          <button mat-menu-item (click)="deleteUser(user)">Delete</button>
+        </mat-menu>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<ng-template #noDataFound>
+  <div>No data Found</div>
+</ng-template>
