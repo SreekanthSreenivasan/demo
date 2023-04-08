@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,8 +15,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { SearchBarComponent } from './user-detail/search-bar/search-bar.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +25,6 @@ import { BrowserModule } from '@angular/platform-browser';
   ],
   imports: [
     BrowserModule,
-    NgxPaginationModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,

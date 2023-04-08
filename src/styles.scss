@@ -9,3 +9,9 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+.form-control {
+  height: 3rem;
+}
+.btn {
+  padding: 0.6rem 1em;
+}

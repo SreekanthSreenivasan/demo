@@ -1,18 +1,14 @@
-<section>
-  <div class="example-button-row">
-    <!-- <button mat-button color="primary" (click)="changeStatus(currentStatus)">
-      {{ currentStatus }}
-    </button> -->
-    <section class="example-section">
-      <mat-checkbox class="example-margin" (change)="changeStatus($event)"
-        >Show even Id</mat-checkbox
-      >
-    </section>
+<div class="row">
+  <div class="col-12 py-4">
+    <h1>Machine Test</h1>
   </div>
-
-  <div class="example-button-row">
-    <button mat-button color="primary" (click)="addNewUser()">
-      Add new user
-    </button>
+  <div class="col-6">
+    <app-search-bar></app-search-bar>
   </div>
-</section>
+  <div class="col-6 text-end">
+    <mat-checkbox class="me-3" (change)="changeStatus($event)"
+      >Show even Id</mat-checkbox
+    >
+    <button class="btn btn-success" (click)="addNewUser()">Add new user</button>
+  </div>
+</div>
